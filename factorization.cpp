@@ -11,7 +11,7 @@ using std::cin;
 using std::endl;
 using std::string;
 
-int factorUsingRecursion(int x) {
+int factor_using_recursion(int x) {
 	if (x == 1){
 		return 1;
 	}
@@ -20,7 +20,7 @@ int factorUsingRecursion(int x) {
 	}
 }
 
-int factorUsingFor(int x) {
+int factor_using_for(int x) {
 	int result = 1;
 
 	for ( int i=x; i>0; i-- ) {
@@ -30,7 +30,7 @@ int factorUsingFor(int x) {
 	return result;
 }
 
-void clearScreen() {
+void clear_screen() {
 	#ifdef OS_Windows
 		system("cls");
 	#else
@@ -54,16 +54,16 @@ int main() {
 	float diff;
 	clock_t t_start, t_end;
 
-	clearScreen();
+	clear_screen();
 
 	t_start = clock();
-	int factorRecursion = factorUsingRecursion(x);		
+	int factorRecursion = factor_using_recursion(x);		
 	t_end = clock();
 	diff =  t_end - t_start;
 	printResult(x, factorRecursion, diff, "recursion");	
 	
 	t_start = clock();
-	int factorFor = factorUsingFor(x);		
+	int factorFor = factor_using_for(x);		
 	t_end = clock();
 	diff =  t_end - t_start;
 	printResult(x, factorFor, diff, "for");
