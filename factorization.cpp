@@ -38,7 +38,7 @@ void clear_screen() {
 	#endif
 }
 
-void printResult(int x, int result, float diff, string method) {
+void print_result(int x, int result, float diff, string method) {
 	cout << method << endl;
 	cout << x << "! = " << result << endl;
 	cout << "runtime: " << diff << " milliseconds" << endl;
@@ -60,7 +60,7 @@ int main() {
 	int factorRecursion = factor_using_recursion(x);		
 	t_end = clock();
 	diff =  t_end - t_start;
-	printResult(x, factorRecursion, diff, "recursion");	
+	print_result(x, factorRecursion, diff, "recursion");	
 	
 	t_start = clock();
 	int factorFor = factor_using_for(x);		
