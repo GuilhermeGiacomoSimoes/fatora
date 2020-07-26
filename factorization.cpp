@@ -16,7 +16,7 @@ int factor_using_recursion(int x) {
 		return 1;
 	}
 	else {
-		return x * factorUsingRecursion(x - 1);
+		return x * factor_using_recursion(x - 1);
 	}
 }
 
@@ -66,6 +66,6 @@ int main() {
 	int factorFor = factor_using_for(x);		
 	t_end = clock();
 	diff =  t_end - t_start;
-	printResult(x, factorFor, diff, "for");
+	print_result(x, factorFor, diff, "for");
 	
 }
